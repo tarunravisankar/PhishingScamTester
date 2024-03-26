@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Scam Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Phishing Scam Tester</h1>
+        <div id="name-input">
+            <label for="name">Enter Your Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+            <button onclick="startTest()">Start Test</button>
+        </div>
+        <span id="score" style="display: none;">Score: 0/0</span>
+        <div id="email-container" style="display:none;"></div>
+        <div id="options-container" style="display:none;">
+            <button id="phishing-btn" class="option-btn" onclick="selectOption('phishing')">Phishing Scam</button>
+            <button id="real-email-btn" class="option-btn" onclick="selectOption('real')">Real Email</button>
+        </div>
+        <button id="submit-btn" onclick="submitAnswers()" style="display:none;">Submit</button>
+        <div id="result" style="display:none;"></div>
+        <div id="feedback" style="display:none;"></div> <!-- Added feedback container -->
+        <div class="home-button">
+            <button onclick="goToHome()">Go to Home</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
