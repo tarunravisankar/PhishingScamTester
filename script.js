@@ -100,45 +100,9 @@ function displayEmail() {
             const originalTitle = link.getAttribute('title');
             link.setAttribute('title', originalTitle);
         });
-        // Add mouseover event listener to show the fake domain in the bottom right corner
-        link.addEventListener('mouseover', () => {
-            const fakeDomainText = document.createElement('div');
-            const fakeDomain = link.getAttribute('title').split(' ').pop().replace(/['"]+/g, ''); // Extract the fake domain from the title attribute
-            fakeDomainText.textContent = 'Fake Domain: ' + fakeDomain;
-            fakeDomainText.style.position = 'fixed';
-            fakeDomainText.style.bottom = '10px';
-            fakeDomainText.style.right = '10px';
-            fakeDomainText.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
-            fakeDomainText.style.padding = '5px';
-            fakeDomainText.style.border = '1px solid #ccc';
-            fakeDomainText.classList.add('fake-domain-text');
-            document.body.appendChild(fakeDomainText);
-            link.fakeDomainText = fakeDomainText;
-        });
-        // Add mouseout event listener to remove the fake domain text when mouse leaves the link
-        link.addEventListener('mouseout', () => {
-            if (link.fakeDomainText) {
-                link.fakeDomainText.remove();
-            }
-        });
-        // Add click event listener to show the fake domain when link is clicked
-        link.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent the default action of following the link
-            const fakeDomainText = document.createElement('div');
-            const fakeDomain = link.getAttribute('title').split(' ').pop().replace(/['"]+/g, ''); // Extract the fake domain from the title attribute
-            fakeDomainText.textContent = 'Fake Domain: ' + fakeDomain;
-            fakeDomainText.style.position = 'fixed';
-            fakeDomainText.style.bottom = '10px';
-            fakeDomainText.style.right = '10px';
-            fakeDomainText.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
-            fakeDomainText.style.padding = '5px';
-            fakeDomainText.style.border = '1px solid #ccc';
-            fakeDomainText.classList.add('fake-domain-text');
-            document.body.appendChild(fakeDomainText);
-            link.fakeDomainText = fakeDomainText;
-        });
     });
 }
+
 
 
 
