@@ -156,7 +156,7 @@ function showFeedback(isCorrect) {
         `;
     } else {
         feedbackContainer.innerHTML = `
-            <p><strong>Incorrect.</strong> This email is a phishing attempt. Pay attention to ${currentEmail.phishing ? 'the suspicious link and request for immediate action.' : 'the legitimate sender and content.'}</p>
+            <p><strong>Incorrect.</strong> This email is a phishing attempt. Pay attention to ${currentEmail.phishing ? 'the suspicious link in the bottom left-hand corner on a laptop or press and hold on link without clicking on a phone.' : 'the legitimate sender and content.'}</p>
         `;
     }
 
